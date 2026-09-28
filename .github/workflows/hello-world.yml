@@ -1,0 +1,16 @@
+name: Custom CI Workflow
+
+on: [push]
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Say Hello Step
+        run: echo "Hello from Nursultan"
+
+      - name: Show System Info
+        run: uname -a
